@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>ustwo Form Test</title>
   <link rel="stylesheet" href="./css/main.css">
+  <script src="../app/form.js"></script>
 </head>
 <body>
   <div id="container">
@@ -25,11 +26,15 @@
           <input class="selectors" type="checkbox" name="cake" value="buttercakes"><span class="selector-label">Mudcakes</span></br>
 
         <p class="form-label">Celebration type:</p>
-          <input class="selectors" type="radio" name="celebration" value="birthday"><span class="selector-label">Birthday</span></br>
-          <input class="selectors" type="radio" name="celebration" value="wedding"><span class="selector-label">Wedding</span></br>
-          <input class="selectors" type="radio" name="celebration" value="corporate"><span class="selector-label">Corporate</span></br>
-          <input class="selectors" type="radio" name="celebration" value="other"><span class="selector-label">Other</span></br>
-          <input type="text" name="celebration" class="wide" disabled="disabled" />
+          <input class="selectors" type="radio" name="celebration" value="birthday" onchange="ustwoForm.disableText()" required>
+          <span class="selector-label">Birthday</span></br>
+          <input class="selectors" type="radio" name="celebration" value="wedding" onchange="ustwoForm.disableText()">
+          <span class="selector-label">Wedding</span></br>
+          <input class="selectors" type="radio" name="celebration" value="corporate" onchange="ustwoForm.disableText()">
+          <span class="selector-label">Corporate</span></br>
+          <input class="selectors" type="radio" name="celebration" value="other" onchange="ustwoForm.enableText()">
+          <span class="selector-label">Other</span></br>
+          <input type="text" name="celebration" id="other-field" class="wide" disabled="disabled" />
 
           <p class="form-label">Tell us about your dream cake:</p>
           <textarea class="wide" name="dream-cake" rows="4"></textarea>
