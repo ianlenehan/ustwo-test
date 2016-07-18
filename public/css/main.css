@@ -1,6 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
   margin: 0;
-  background-color: #bada55; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #374550;
+  color: white; }
 
-h1 {
-  color: #bada55; }
+#container {
+  border: 1px solid grey;
+  width: 550px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  box-sizing: border-box; }
+
+.h1-container {
+  background-color: #374550;
+  position: absolute;
+  top: -45px;
+  padding: 0 10px; }
+
+.form-label {
+  margin-bottom: 5px; }
+
+.cake-form input {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px;
+  background-color: #69737c;
+  border: 1px solid grey; }
