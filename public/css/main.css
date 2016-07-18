@@ -8,26 +8,42 @@ body {
 #container {
   border: 1px solid grey;
   width: 550px;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin: 50px auto;
   padding: 30px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: auto; }
 
 .h1-container {
   background-color: #374550;
   position: absolute;
-  top: -45px;
+  top: 5px;
   padding: 0 10px; }
 
 .form-label {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  font-weight: bold; }
 
-.cake-form input {
-  width: 100%;
+.cake-form input, .cake-form textarea {
   font-family: "Open Sans", sans-serif;
   padding: 5px;
   background-color: #69737c;
   border: 1px solid grey; }
+
+.cake-form .wide {
+  width: 100%; }
+
+.cake-form .selectors, .cake-form .selector-label {
+  margin: 10px 5px 10px 0; }
+
+.cake-form .selector-label {
+  color: gainsboro;
+  font-size: 14px; }
+
+.cake-form .button {
+  margin-top: 10px;
+  padding: 10px; }
+
+.cake-form .submit-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white; }

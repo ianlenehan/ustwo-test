@@ -14,7 +14,28 @@
     <div>
       <form class="cake-form" action="post">
         <p class="form-label">Name:</p>
-        <input type="text" name="name">
+        <input class="wide" type="text" name="name" required>
+        <p class="form-label">Email:</p>
+        <input class="wide" type="text" name="email" required>
+
+        <p class="form-label">Type of cake:</p>
+          <input class="selectors" type="checkbox" name="cake" value="cupcakes"><span class="selector-label">Cupcakes</span></br>
+          <input class="selectors" type="checkbox" name="cake" value="cheesecakes"><span class="selector-label">Cheesecakes</span></br>
+          <input class="selectors" type="checkbox" name="cake" value="mudcakes"><span class="selector-label">Butter Cakes</span></br>
+          <input class="selectors" type="checkbox" name="cake" value="buttercakes"><span class="selector-label">Mudcakes</span></br>
+
+        <p class="form-label">Celebration type:</p>
+          <input class="selectors" type="radio" name="celebration" value="birthday"><span class="selector-label">Birthday</span></br>
+          <input class="selectors" type="radio" name="celebration" value="wedding"><span class="selector-label">Wedding</span></br>
+          <input class="selectors" type="radio" name="celebration" value="corporate"><span class="selector-label">Corporate</span></br>
+          <input class="selectors" type="radio" name="celebration" value="other"><span class="selector-label">Other</span></br>
+          <input type="text" name="celebration" class="wide" disabled="disabled" />
+
+          <p class="form-label">Tell us about your dream cake:</p>
+          <textarea class="wide" name="dream-cake" rows="4"></textarea>
+
+          <input class="submit-button button" type="submit" value="Send away">
+          <input class="reset-button button" type="submit" value="Restart">
       </form>
     </div>
 
