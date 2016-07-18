@@ -1,3 +1,5 @@
+// run 'npm watch-css' in terminal to start compiling SASS
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 $main-font: 'Open Sans', sans-serif;
 $main-font-color: white;
@@ -29,18 +31,20 @@ body {
   padding: 0 10px;
 }
 
-.form-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+
 
 .cake-form {
 
+  .form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
   input, textarea {
     font-family: $main-font;
     padding: 5px;
     background-color: $input-color;
     border: 1px solid $border-color;
+    color: $main-font-color;
   }
   .wide {
     width: 100%;
@@ -55,11 +59,21 @@ body {
   .button {
     margin-top: 10px;
     padding: 10px;
+    cursor: pointer;
   }
   .submit-button {
     background-color: transparent;
     border: 2px solid white;
     color: $main-font-color;
+  }
+  .reset-button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: $secondary-font-color;
+  }
+  .button:hover {
+    font-weight: bolder;
   }
 
 }

@@ -19,7 +19,7 @@ body {
   top: 5px;
   padding: 0 10px; }
 
-.form-label {
+.cake-form .form-label {
   margin-bottom: 5px;
   font-weight: bold; }
 
@@ -27,7 +27,8 @@ body {
   font-family: "Open Sans", sans-serif;
   padding: 5px;
   background-color: #69737c;
-  border: 1px solid grey; }
+  border: 1px solid grey;
+  color: white; }
 
 .cake-form .wide {
   width: 100%; }
@@ -41,9 +42,19 @@ body {
 
 .cake-form .button {
   margin-top: 10px;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
 
 .cake-form .submit-button {
   background-color: transparent;
   border: 2px solid white;
   color: white; }
+
+.cake-form .reset-button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: gainsboro; }
+
+.cake-form .button:hover {
+  font-weight: bolder; }
