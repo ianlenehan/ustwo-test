@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+  </head>
+  <body>
+
+    <div id="celebration" style="display:none">
+      <p class="form-label">Celebration type:</p>
+        <input class="selectors" type="radio" name="celebration" value="birthday" onchange="ustwoForm.disableText()" required>
+        <span class="selector-label">Birthday</span></br>
+        <input class="selectors" type="radio" name="celebration" value="wedding" onchange="ustwoForm.disableText()">
+        <span class="selector-label">Wedding</span></br>
+        <input class="selectors" type="radio" name="celebration" value="corporate" onchange="ustwoForm.disableText()">
+        <span class="selector-label">Corporate</span></br>
+        <input class="selectors" type="radio" name="celebration" value="other" id="other" onchange="ustwoForm.enableText()">
+        <span class="selector-label">Other</span></br>
+        <input type="text" name="celebration" id="other-field" class="wide" disabled="true" />
+      </div>
+
+
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <!-- load code you want to test here -->
+    <script src="../app/form.js"></script>
+
+    <!-- load your test files here -->
+    <script src="./form2.test.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>

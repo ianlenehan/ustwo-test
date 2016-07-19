@@ -6,18 +6,18 @@
   <link rel="stylesheet" href="./css/main.css">
   <script src="../app/form.js"></script>
 </head>
-<body>
+<body onload="Init()">
   <div id="container">
     <div class="h1-container">
       <h1 class="h1-main">Cake Enquiry Form</h1>
     </div>
 
     <div>
-      <form class="cake-form" action="post">
+      <form class="cake-form" action="./thanks.html">
         <p class="form-label">Name:</p>
-        <input class="wide" type="text" name="name" required>
+        <input class="wide" type="text" name="name" id="name-field" required>
         <p class="form-label">Email:</p>
-        <input class="wide" type="text" name="email" required>
+        <input class="wide" type="text" name="email" required id="email-field">
 
         <p class="form-label">Type of cake:</p>
           <input class="selectors" type="checkbox" name="cake" value="cupcakes"><span class="selector-label">Cupcakes</span></br>
@@ -25,22 +25,25 @@
           <input class="selectors" type="checkbox" name="cake" value="mudcakes"><span class="selector-label">Butter Cakes</span></br>
           <input class="selectors" type="checkbox" name="cake" value="buttercakes"><span class="selector-label">Mudcakes</span></br>
 
-        <p class="form-label">Celebration type:</p>
-          <input class="selectors" type="radio" name="celebration" value="birthday" onchange="ustwoForm.disableText()" required>
-          <span class="selector-label">Birthday</span></br>
-          <input class="selectors" type="radio" name="celebration" value="wedding" onchange="ustwoForm.disableText()">
-          <span class="selector-label">Wedding</span></br>
-          <input class="selectors" type="radio" name="celebration" value="corporate" onchange="ustwoForm.disableText()">
-          <span class="selector-label">Corporate</span></br>
-          <input class="selectors" type="radio" name="celebration" value="other" onchange="ustwoForm.enableText()">
-          <span class="selector-label">Other</span></br>
-          <input type="text" name="celebration" id="other-field" class="wide" disabled="disabled" />
+        <div id="celebration">
+          <p class="form-label">Celebration type:</p>
+            <input class="selectors" type="radio" name="celebration" value="birthday" onchange="ustwoForm.disableText()" required>
+            <span class="selector-label">Birthday</span></br>
+            <input class="selectors" type="radio" name="celebration" value="wedding" onchange="ustwoForm.disableText()">
+            <span class="selector-label">Wedding</span></br>
+            <input class="selectors" type="radio" name="celebration" value="corporate" onchange="ustwoForm.disableText()">
+            <span class="selector-label">Corporate</span></br>
+            <input class="selectors" type="radio" name="celebration" value="other" id="other" onchange="ustwoForm.enableText()">
+            <span class="selector-label">Other</span></br>
+            <input type="text" name="celebration" id="other-field" class="wide" disabled="true" />
+          </div>
 
           <p class="form-label">Tell us about your dream cake:</p>
           <textarea class="wide" name="dream-cake" rows="4"></textarea>
 
-          <input class="submit-button button" type="submit" value="Send away">
-          <input class="reset-button button" type="submit" value="Restart">
+          <button id="submit-button" class="submit-button button" type="button">Send away</button>
+          <button class="reset-button button" type="button">Restart</button>
+          <input id="submit-handle" type="submit" style="display: none">
       </form>
     </div>
 
