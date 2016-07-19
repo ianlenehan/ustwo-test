@@ -34,7 +34,8 @@ body {
   width: 100%; }
 
 .cake-form .selectors, .cake-form .selector-label {
-  margin: 10px 5px 10px 0; }
+  margin: 10px 5px 10px 0;
+  background-color: transparent; }
 
 .cake-form .selector-label {
   color: gainsboro;
