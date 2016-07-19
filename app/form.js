@@ -34,7 +34,7 @@ var ustwoForm = {
       if(celebrations[i].checked) {
         celebration = celebrations[i].value;
         break;
-      };
+      }
     }
 
     var formData = {
@@ -42,14 +42,13 @@ var ustwoForm = {
       email: document.getElementById('email-field').value,
       celebration: celebration,
       celebrationOther: document.getElementById('other-field').value
-    }
+    };
     return formData;
   },
 
   submitForm: function (e) {
     e.preventDefault();
     var formData = ustwoForm.collectFormData();
-    console.log(formData);
     var message = ustwoForm.validateForm(formData);
     document.getElementById('final-message').innerHTML = message;
   }
