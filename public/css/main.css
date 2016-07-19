@@ -35,7 +35,8 @@ body {
 
 .cake-form .selectors, .cake-form .selector-label {
   margin: 10px 5px 10px 0;
-  background-color: transparent; }
+  background-color: transparent;
+  border: none; }
 
 .cake-form .selector-label {
   color: gainsboro;
