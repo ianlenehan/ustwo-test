@@ -11,16 +11,48 @@ var ustwoForm = {
     field.disabled = false;
   },
 
-  submitForm: function (e) {
-    var other = document.getElementById('other');
-    var otherField = document.getElementById('other-field');
-    if(other.checked && otherField.value == '') {
-      e.preventDefault();
-      alert('You must enter a value for Other')
+  validateForm: function (formData) {
+    var message;
+    if(!formData.name.length) {
+      message = "You must write your name";
+    } else if (!formData.email.length) {
+      message = "Please include your email address";
+    } else if (formData.celebration === undefined) {
+      message = "Celebration type is required";
+    } else if (formData.celebration === 'other' && !formData.celebrationOther.length) {
+      message = "Please provide details for your other selection";
     } else {
-      document.getElementById('submit-handle').click();
+      message = "Thanks for submitting your form!";
     }
+    return message;
   },
+
+  collectFormData: function () {
+    var celebrations = document.getElementsByName('celebration');
+    var celebration;
+    for (var i = 0; i < celebrations.length; i++ ) {
+      if(celebrations[i].checked) {
+        celebration = celebrations[i].value;
+        break;
+      };
+    }
+
+    var formData = {
+      name: document.getElementById('name-field').value,
+      email: document.getElementById('email-field').value,
+      celebration: celebration,
+      celebrationOther: document.getElementById('other-field').value
+    }
+    return formData;
+  },
+
+  submitForm: function (e) {
+    e.preventDefault();
+    var formData = ustwoForm.collectFormData();
+    console.log(formData);
+    var message = ustwoForm.validateForm(formData);
+    document.getElementById('final-message').innerHTML = message;
+  }
 
 };
 
