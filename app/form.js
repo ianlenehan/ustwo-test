@@ -1,3 +1,5 @@
+// in terminal run 'jshint app/form.js' to lint the doc
+
 var ustwoForm = {
 
   disableText: function () {
