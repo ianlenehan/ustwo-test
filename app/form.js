@@ -13,12 +13,19 @@ var ustwoForm = {
     field.disabled = false;
   },
 
+  validateEmail: function (email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  },
+
   validateForm: function (formData) {
     var message;
     if(!formData.name.length) {
       message = "You must write your name";
     } else if (!formData.email.length) {
       message = "Please include your email address";
+    } else if (!ustwoForm.validateEmail(formData.email)) {
+      message = "Please enter a valid email address";
     } else if (formData.celebration === undefined) {
       message = "Celebration type is required";
     } else if (formData.celebration === 'other' && !formData.celebrationOther.length) {
